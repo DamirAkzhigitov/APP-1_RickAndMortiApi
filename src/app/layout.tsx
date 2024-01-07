@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import styles from '@/app/page.module.css';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,7 +16,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <nav className={styles.navigationContainer}>
-          <div className={styles.logo}>Header</div>
+          <div className={styles.logo}>
+            <Link href="/">Home</Link>
+          </div>
           <div className={styles.menu}>menu</div>
         </nav>
         <main className={styles.main}>

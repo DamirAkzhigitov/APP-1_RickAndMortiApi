@@ -1,30 +1,21 @@
-import Link from 'next/link';
+import { AppCard } from '@/components/AppCard/AppCard';
+import styles from './page.module.css';
+import { AppItem } from '@/models';
 
-const appList = [
+const appList: AppItem[] = [
   {
-    title: 'RickAndMorty',
-    link: '/characters'
+    title: 'RickAndMorty API',
+    link: '/characters',
+    description:
+      'Простое приложение в котором отображаются персонажи мультсериала Rick And Morti\nКаждый персонаж представлен в виде карточки с кратким описанием \nИмя персонажа является кнопкой которая перенаправляет на его персональную страницу'
   }
 ];
 
 export default function Home() {
   return (
     <>
-      <h2>Home</h2>
-
-      <div className="container">
-        {appList.map((app) => (
-          <section key={app.title} className="app-container">
-            <div className="app-container__image"></div>
-            <div className="app-container__description">
-              <Link href={app.link} className="app-container__title">
-                {app.title}
-              </Link>
-              <div className="app-container__about"></div>
-            </div>
-          </section>
-        ))}
-      </div>
+      <h1 className={styles.title}>App list</h1>
+      <div className="container">{appList.map((app) => AppCard(app))}</div>
     </>
   );
 }

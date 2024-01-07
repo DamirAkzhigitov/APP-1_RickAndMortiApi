@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '../page.module.css';
+import styles from './characters.module.scss';
 import { CharacterCard } from '@/components/characters/CharacterCard';
 import { useEffect, useState } from 'react';
 import { fetchCharacters } from '@/api';

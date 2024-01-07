@@ -1,0 +1,19 @@
+.appContainer {
+  display: flex;
+  border: 1px solid #0c85c04d;
+  height: 200px;
+  box-sizing: content-box;
+
+  &:hover {
+    border-color: rgba(12, 133, 192, 0.68);
+  }
+  &__description {
+    padding: 10px;
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__about {
+    white-space: break-spaces;
+  }
+}

@@ -1,11 +1,3 @@
-.avatarsContainer {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 5px;
-  padding: 20px;
-}
-
 .navigationContainer {
   padding: 20px;
   background: #151515;
@@ -31,4 +23,8 @@
 .main {
   height: 100vh;
   padding: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
 }
