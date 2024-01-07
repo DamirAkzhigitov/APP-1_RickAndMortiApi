@@ -16,10 +16,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={styles.avatarsContainer}>
-      {characters.map((profile) => {
-        return <CharacterCard {...profile} key={profile.id} />;
-      })}
-    </div>
+    <>
+      <h1>Rick And Morty API preview app</h1>
+      <div className={styles.avatarsContainer}>
+        {characters.map((profile) => {
+          return <CharacterCard {...profile} key={profile.id} />;
+        })}
+      </div>
+    </>
   );
 }

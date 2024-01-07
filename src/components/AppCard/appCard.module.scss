@@ -7,13 +7,34 @@
   &:hover {
     border-color: rgba(12, 133, 192, 0.68);
   }
+  &__image {
+    min-width: 200px;
+  }
   &__description {
     padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
   }
   &__title {
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__aboutContainer {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    flex: 1;
   }
   &__about {
     white-space: break-spaces;
+  }
+  &__techStack {
+    &_item {
+      padding: 2px 5px;
+      border-radius: 5px;
+      border: 1px solid white;
+    }
   }
 }

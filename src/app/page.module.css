@@ -21,8 +21,8 @@
 }
 
 .main {
-  height: 100vh;
   padding: 20px;
+  height: calc(100% - 60px);
 }
 
 .title {

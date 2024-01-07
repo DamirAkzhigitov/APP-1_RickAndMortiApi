@@ -28,4 +28,5 @@ export interface AppItem {
   title: string;
   link: string;
   description: string;
+  version: string;
 }
