@@ -1,35 +1,30 @@
-'use client';
+import Link from 'next/link';
 
-import styles from './page.module.css';
-import { Profile } from '@/app/Profile';
-import { useEffect, useState } from 'react';
-import { fetchCharacters } from '@/api';
-import { CharacterItem } from '@/models';
-import { Filters } from '@/components/Filters';
+const appList = [
+  {
+    title: 'RickAndMorty',
+    link: '/characters'
+  }
+];
 
 export default function Home() {
-  const [characters, setCharacters] = useState<CharacterItem[]>([]);
-
-  useEffect(() => {
-    fetchCharacters().then((characters) => {
-      setCharacters(characters);
-    });
-  }, []);
-
   return (
-    <main className={styles.main}>
-      <nav className={styles.navigationContainer}>
-        <div className={styles.logo}>Header</div>
-        <div className={styles.filterContainer}>
-          <Filters />
-        </div>
-        <div className={styles.menu}>menu</div>
-      </nav>
-      <div className={styles.avatarsContainer}>
-        {characters.map((profile) => {
-          return <Profile {...profile} key={profile.id} />;
-        })}
+    <>
+      <h2>Home</h2>
+
+      <div className="container">
+        {appList.map((app) => (
+          <section key={app.title} className="app-container">
+            <div className="app-container__image"></div>
+            <div className="app-container__description">
+              <Link href={app.link} className="app-container__title">
+                {app.title}
+              </Link>
+              <div className="app-container__about"></div>
+            </div>
+          </section>
+        ))}
       </div>
-    </main>
+    </>
   );
 }
