@@ -2,8 +2,6 @@
   display: grid;
   width: 100%;
   grid-template-columns: repeat(5, 1fr);
-  overflow: auto;
-  height: calc(100vh - 60px);
   grid-gap: 5px;
   padding: 20px;
 }
@@ -32,4 +30,5 @@
 
 .main {
   height: 100vh;
+  padding: 20px;
 }
