@@ -1,0 +1,14 @@
+.select {
+    min-width: 100px;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.selectLabel {
+    margin-right: 10px;
+}
+
+.filterItem {
+
+}

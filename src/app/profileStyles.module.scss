@@ -1,0 +1,49 @@
+$avatarWidth: 20px;
+
+@mixin link-item {
+  color: #10b1ff;
+
+  &:hover {
+    color: aqua;
+  }
+}
+.linkItem {
+  @include link-item;
+}
+.profileItem {
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+  justify-content: space-between;
+  border: 1px solid #0c85c04d;
+  &:hover {
+    border: 1px solid rgba(12, 133, 192, 0.68);
+  }
+  .descriptionList {
+    &__item {
+      span:first-child {
+        color: #b2b2b2;
+      }
+    }
+  }
+
+  .profileInfo {
+    & > div {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    @include link-item;
+  }
+  .profileImageContainer {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

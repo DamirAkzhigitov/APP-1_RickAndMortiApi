@@ -1,0 +1,35 @@
+.avatarsContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  overflow: auto;
+  height: calc(100vh - 60px);
+  grid-gap: 5px;
+  padding: 20px;
+}
+
+.navigationContainer {
+  padding: 20px;
+  background: #151515;
+  display: flex;
+  justify-content: space-between;
+  color: #e3e3e3;
+  .logo {
+
+  }
+  .filterContainer {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    & > div.filterItem {
+      margin-right: 10px;
+    }
+  }
+  .menu {
+
+  }
+}
+
+.main {
+  height: 100vh;
+}
