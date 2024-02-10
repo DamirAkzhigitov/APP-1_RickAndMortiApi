@@ -1,4 +1,4 @@
-import styles from './filters.module.css';
+import styles from './filters.module.css'
 export function Filters() {
   return (
     <>
@@ -14,5 +14,5 @@ export function Filters() {
         </select>
       </div>
     </>
-  );
+  )
 }

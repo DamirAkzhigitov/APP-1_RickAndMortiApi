@@ -1,7 +1,7 @@
-import styles from '@/components/characters/characterCard.module.scss';
-import Link from 'next/link';
-import { CharacterItem } from '@/models';
-import { getLink } from '@/utils/helpers';
+import styles from '@/components/characters/characterCard.module.scss'
+import Link from 'next/link'
+import { CharacterItem } from '@/models'
+import { getLink } from '@/utils/helpers'
 
 export function CharacterCard(props: CharacterItem) {
   const user = {
@@ -9,7 +9,7 @@ export function CharacterCard(props: CharacterItem) {
     imageUrl: props.image,
     href: `characters/${props.id}`,
     imageSize: 90
-  };
+  }
 
   return (
     <>
@@ -33,7 +33,10 @@ export function CharacterCard(props: CharacterItem) {
               <span>Origin: </span>
               <span>
                 {props.origin.url ? (
-                  <Link className={styles.linkItem} href={getLink(props.origin.url)}>
+                  <Link
+                    className={styles.linkItem}
+                    href={'characters/' + getLink(props.origin.url)}
+                  >
                     {props.origin.name}
                   </Link>
                 ) : (
@@ -45,7 +48,10 @@ export function CharacterCard(props: CharacterItem) {
               <span>Location: </span>
               <span>
                 {props.location.url ? (
-                  <Link className={styles.linkItem} href={getLink(props.location.url)}>
+                  <Link
+                    className={styles.linkItem}
+                    href={'characters/' + getLink(props.location.url)}
+                  >
                     {props.location.name}
                   </Link>
                 ) : (
@@ -60,5 +66,5 @@ export function CharacterCard(props: CharacterItem) {
         </div>
       </div>
     </>
-  );
+  )
 }

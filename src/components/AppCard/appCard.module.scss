@@ -35,6 +35,9 @@
       padding: 2px 5px;
       border-radius: 5px;
       border: 1px solid white;
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
     }
   }
 }
